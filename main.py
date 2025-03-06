@@ -8,7 +8,7 @@ from typing import List, Optional
 # Initialisation de l'application FastAPI
 app = FastAPI()
 
-# Configuration de CORS
+# Configuration de CORS pour permettre les requêtes du frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000", "http://localhost:3002"],  # Ajoutez ici le port de votre frontend
@@ -23,11 +23,11 @@ class StudentBase(BaseModel):
     age: int
     major: Optional[str] = None
 
-# Pour les requêtes de création (sans ID)
+# Modèle pour les requêtes de création (sans ID)
 class StudentCreate(StudentBase):
     pass
 
-# Pour les réponses et mises à jour (avec ID)
+# Modèle pour les réponses et mises à jour (avec ID)
 class Student(StudentBase):
     id: int
 

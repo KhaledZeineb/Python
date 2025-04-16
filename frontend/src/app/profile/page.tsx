@@ -237,32 +237,33 @@ export default function ProfilePage() {
           </form>
         ) : (
           <>
-            <div className="space-y-4">
-              <div className="border-b pb-2">
-                <p className="text-sm text-gray-500">Nom complet</p>
-                <p className="font-medium">{profile?.name}</p>
-              </div>
-              
-              <div className="border-b pb-2">
-                <p className="text-sm text-gray-500">Email</p>
-                <p className="font-medium">{profile?.email}</p>
-              </div>
-              
-              <div className="border-b pb-2">
-                <p className="text-sm text-gray-500">Âge</p>
-                <p className="font-medium">{profile?.age} ans</p>
-              </div>
-              
-              <div className="border-b pb-2">
-                <p className="text-sm text-gray-500">Spécialité</p>
-                <p className="font-medium">{profile?.major || 'Non spécifiée'}</p>
-              </div>
-              
-              <div className="pb-2">
-                <p className="text-sm text-gray-500">Département</p>
-                <p className="font-medium">{getDepartmentName(profile?.department_id || 0)}</p>
-              </div>
-            </div>
+            <div className="space-y-4 bg-white p-6 rounded-xl shadow-sm">
+  <div className="border-b border-gray-200 pb-2">
+    <p className="text-sm text-gray-500">Nom complet</p>
+    <p className="font-medium text-black">{profile?.name}</p>
+  </div>
+
+  <div className="border-b border-gray-200 pb-2">
+    <p className="text-sm text-gray-500">Email</p>
+    <p className="font-medium text-black">{profile?.email}</p>
+  </div>
+
+  <div className="border-b border-gray-200 pb-2">
+    <p className="text-sm text-gray-500">Âge</p>
+    <p className="font-medium text-black">{profile?.age} ans</p>
+  </div>
+
+  <div className="border-b border-gray-200 pb-2">
+    <p className="text-sm text-gray-500">Spécialité</p>
+    <p className="font-medium text-black">{profile?.major || 'Non spécifiée'}</p>
+  </div>
+
+  <div className="pb-2">
+    <p className="text-sm text-gray-500">Département</p>
+    <p className="font-medium text-black">{getDepartmentName(profile?.department_id || 0)}</p>
+  </div>
+</div>
+
             
             <div className="mt-6">
               <button

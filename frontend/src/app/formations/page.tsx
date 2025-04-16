@@ -149,7 +149,7 @@ export default function FormationsPage() {
           {formations.map((formation) => (
             <div key={formation.id} className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="p-6">
-                <h2 className="text-xl font-semibold mb-2">{formation.title}</h2>
+                <h2 className="text-xl font-semibold mb-2 text-gray-900">{formation.title}</h2>
                 <p className="text-gray-600 mb-4">{formation.description}</p>
                 <div className="flex items-center justify-between">
                   <p className="text-gray-500 text-sm">Durée: {formation.duration} heures</p>

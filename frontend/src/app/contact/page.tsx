@@ -65,7 +65,7 @@ export default function ContactPage() {
       <div className="grid md:grid-cols-2 gap-8">
         <div>
           <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-            <h2 className="text-xl font-semibold mb-4">Nos informations</h2>
+            <h2 className="text-xl font-semibold mb-4 text-gray-300">Nos informations</h2>
             
             <div className="mb-4">
               <h3 className="font-semibold text-gray-700">Adresse</h3>
@@ -89,7 +89,7 @@ export default function ContactPage() {
           </div>
           
           <div className="bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-xl font-semibold mb-4">Suivez-nous</h2>
+            <h2 className="text-xl font-semibold mb-4 text-gray-300">Suivez-nous</h2>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 bg-blue-600 text-white flex items-center justify-center rounded-full hover:bg-blue-700">
                 F
@@ -108,7 +108,7 @@ export default function ContactPage() {
         </div>
         
         <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold mb-4">Envoyez-nous un message</h2>
+          <h2 className="text-xl font-semibold mb-4 text-gray-300">Envoyez-nous un message</h2>
           
           {status.info.msg && (
             <div className={`p-4 rounded mb-6 ${status.info.error ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`}>
@@ -190,28 +190,35 @@ export default function ContactPage() {
       </div>
       
       <div className="mt-12 bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-semibold mb-4">Notre localisation</h2>
-        <div className="h-96 bg-gray-200 rounded-lg flex items-center justify-center">
-          {/* Remplacer par une vraie carte ou une iframe Google Maps */}
-          <p className="text-gray-500">Carte interactive à intégrer ici</p>
-        </div>
-      </div>
+  <h2 className="text-xl font-semibold mb-4 text-gray-300">Notre localisation</h2>
+  <div className="h-96 rounded-lg overflow-hidden">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3120.9851360817743!2d8.1272390759943!3d33.91949262663888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12556f4bfa2533b1%3A0x64bc8a83921d7097!2sISET%20Tozeur!5e0!3m2!1sfr!2stn!4v1713279365480!5m2!1sfr!2stn"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>
+
       
       <div className="mt-12">
         <h2 className="text-xl font-semibold mb-4">Questions fréquentes</h2>
         <div className="space-y-4">
           <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="font-semibold mb-2">Comment puis-je m'inscrire à une formation ?</h3>
+            <h3 className="font-semibold mb-2 text-gray-300">Comment puis-je m'inscrire à une formation ?</h3>
             <p className="text-gray-600">Pour vous inscrire à une formation, vous devez d'abord créer un compte, puis naviguer vers la page des formations et cliquer sur le bouton "S'inscrire" à côté de la formation qui vous intéresse.</p>
           </div>
           
           <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="font-semibold mb-2">Comment puis-je obtenir une attestation de formation ?</h3>
+            <h3 className="font-semibold mb-2 text-gray-300">Comment puis-je obtenir une attestation de formation ?</h3>
             <p className="text-gray-600">Les attestations de formation sont disponibles automatiquement dans votre espace personnel une fois que vous avez complété tous les modules d'une formation et réussi l'évaluation finale.</p>
           </div>
           
           <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="font-semibold mb-2">Proposez-vous des formations personnalisées pour les entreprises ?</h3>
+            <h3 className="font-semibold mb-2 text-gray-300">Proposez-vous des formations personnalisées pour les entreprises ?</h3>
             <p className="text-gray-600">Oui, nous proposons des solutions de formation sur mesure pour les entreprises. Contactez notre équipe commerciale pour discuter de vos besoins spécifiques.</p>
           </div>
         </div>
